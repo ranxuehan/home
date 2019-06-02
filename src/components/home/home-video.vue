@@ -13,13 +13,12 @@ import * as api from "../../api/home.js";
 import apis from "../../api/apis.js";
 
 export default {
-  name: "home-tree",
+  name: "home-video",
   props: {},
   data() {
     return {};
   },
   mounted() {
-    alert(3)
   },
   methods: {}
 };

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="home-two" >
+    <div class="home-one" >
 
     </div>
 
@@ -11,15 +11,13 @@
 import axios from "axios";
 import * as api from "../../api/home.js";
 import apis from "../../api/apis.js";
-
 export default {
-  name: "home-two",
+  name: "home-other",
   props: {},
   data() {
     return {};
   },
   mounted() {
-    alert(4)
   },
   methods: {}
 };

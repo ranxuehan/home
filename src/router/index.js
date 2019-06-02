@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const home = resolve => require(['~/components/home/home'], resolve)
-const homeOne = resolve => require(['~/components/home/home-one'], resolve)
-const homeTwo = resolve => require(['~/components/home/home-two'], resolve)
-const homeThree = resolve => require(['~/components/home/home-three'], resolve)
+const homeOther = resolve => require(['~/components/home/home-other'], resolve)
+const homeDetails = resolve => require(['~/components/home/home-details'], resolve)
+const homeVideo = resolve => require(['~/components/home/home-video'], resolve)
 
 
 Vue.use(Router)
@@ -17,19 +17,19 @@ export default new Router({
       component: home
     },
     {
-      path: '/home-one',
-      name: 'home-noe',
-      component: homeOne
+      path: '/home-other',
+      name: 'home-other',
+      component: homeOther
     },
     {
-      path: '/home-two',
-      name: 'home-two',
-      component: homeTwo
+      path: '/home-details',
+      name: 'home-details',
+      component: homeDetails
     },
     {
-      path: '/home-three',
-      name: 'home-three',
-      component: homeThree
+      path: '/home-video',
+      name: 'home-video',
+      component: homeVideo
     },
   ]
 })

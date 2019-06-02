@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="home" >
-       <router-link to="/home-one" tag="h6">跳转page1</router-link>
-       <router-link to="/home-two" tag="h6">跳转page2</router-link>
-       <router-link to="/home-three" tag="h6">跳转page3</router-link>
+       <router-link to="/home-other" tag="h6">跳转page1</router-link>
+       <router-link to="/home-details" tag="h6">跳转page2</router-link>
+       <router-link to="/home-video" tag="h6">跳转page3</router-link>
     </div>
 
   </div>
@@ -21,7 +21,6 @@ export default {
     return {};
   },
   mounted() {
-    alert(1)
     this.homeApi()
   },
   methods: {
