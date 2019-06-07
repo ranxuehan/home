@@ -1,6 +1,6 @@
 export default {
 
   // 测试环境
-  ish22_: 'https://www2.ihs22.com/0000'
+  ish22_: 'http://123.176.102.213/'
   
 }

@@ -1,9 +1,10 @@
 <template>
   <div>
-    <div class="home" >
-       <router-link to="/home-other" tag="h6">跳转page1</router-link>
-       <router-link to="/home-details" tag="h6">跳转page2</router-link>
-       <router-link to="/home-video" tag="h6">跳转page3</router-link>
+    <div id="wrapper">
+      <div class="content">
+        <nav-bar></nav-bar>
+      </div>
+        <footer-bar></footer-bar>
     </div>
 
   </div>
@@ -13,12 +14,19 @@
 import axios from "axios";
 import * as api from "../../api/home.js";
 import apis from "../../api/apis.js";
-
+import NavBar from "../common/nav-bar.vue"
+import FooterBar from "../common/footer-bar.vue"
+ 
 export default {
   name: "home",
   props: {},
+  components: {
+    NavBar,
+    FooterBar
+  },
   data() {
-    return {};
+    return {
+    };
   },
   mounted() {
     this.homeApi()
@@ -33,7 +41,6 @@ export default {
       api.homeApi.videoList(params).then(res=>{
         console.log(res,'res')
       }).catch(error=>{
-        toast(error)
       })
     }
   }
