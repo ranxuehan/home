@@ -1,5 +1,6 @@
 import axios from 'axios'
 import cookie from 'js-cookie'
+import qs from 'qs'
 axios.interceptors.request.use(config => {
   config.headers.Authorization = decodeURIComponent(cookie.get('token'));
   return config;
@@ -31,16 +32,15 @@ axios.interceptors.response.use(data => {
 })
 
 export const postRequest = (url, baseURL, params) => {
+  console.log(params, 'params', qs.stringify(params))
   return axios({
     method: 'post',
     baseURL: `${baseURL}`,
     url: `${url}`,
-    data: params,
+    data: qs.stringify(params),
     timeout: 30000,
     headers: {
-      'Content-Type': 'application/json;charset=UTF-8',
-      "Access-Control-Allow-Origin": '*',
-      "Access-Control-Allow-Methods": "POST,GET",
+      'Content-Type': 'application/x-www-form-urlencoded'
     }
   });
 }

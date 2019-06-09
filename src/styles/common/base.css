@@ -1,10 +1,9 @@
 html {
   -webkit-tap-highlight-color: transparent;
-  width: 100%;
-  height: 100%;
-  background-color: #F6F6F6;
+  background: #111111;
 
 }
+
 html,
 body,
 div,
@@ -42,11 +41,6 @@ a {
   padding: 0;
 }
 
-body {
-  font-size: 0rem;
-  margin: 0;
-  padding-bottom: 0;
-}
 
 p {
   margin: 0px;
@@ -79,53 +73,148 @@ textarea {
 
 
 /*PC*/
-@media screen and (min-width:960px) {
 
-  #wrapper{
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  background: #111111;
+}
+
+.banner-cont {
+  margin: 36px 0 36px 0;
+}
+
+.banner-default {
+  margin: 10px 0;
+}
+
+.positon-td {
+  position: fixed;
+  top: 426px;
+  width: 150px;
+  z-index: 9999;
+
+}
+
+.td-left-fixed {
+  left: 50%;
+  margin-left: -700px;
+}
+
+.td-rigth-fixed {
+  right: 50%;
+  margin-right: -700px;
+}
+
+#header {
+  /* height: 60px; */
+}
+
+
+.content {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto 296px auto;
+  /* background: #111111; */
+}
+
+.home-cont {}
+
+.class-public {
+  width: 100%;
+  background: #313131;
+  border-radius: 5px;
+  padding-bottom: 20px;
+}
+
+.class-public .video-cont {
+  margin: 20px 0 0 15px;
+}
+
+.video-cont ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-cont ul li {
+  flex: 1;
+}
+
+.video-cont ul li img {
+  width: 175px;
+  height: 245px;
+}
+
+.video-cont ul li span {
+  font-size: 14px;
+  color: #CCCCCC;
+  text-align: justify;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 20px;
+  width: 175px;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.video-cont ul li i {
+  color: #CCCCCC;
+  font-size: 14px;
+  font-style: normal;
+}
+
+#footer {
+  width: 100%;
+  height: 296px;
+  background: #313131;
+  position: fixed;
+  bottom: 0;
+}
+
+
+@media screen and (max-width: 480px) {
+  #wrapper {
     width: 100%;
     height: 100%;
-    background:#111111;
   }
-  #header {
-    /* height: 60px; */
-  }
-  #footer {
-    width:100%;
-    height: 296px;
-    background: #111111;
-    position: fixed;
-    bottom:0;
-  }
-  .content{
-    width:1200px;
+
+  body {
+    font-size: 0rem;
+    margin: 0;
+    padding-bottom: 0;
+    width: 100%;
     height: 100%;
-    margin: 0 auto;
     background: #111111;
+
   }
- 
 }
 
 /* 兼容iphone5 */
-@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){} 
-@media only screen and (max-device-width :480px){ } 
-@media only screen and (min-device-width :481px){ } 
+/* @media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {}
 
-/*6*/ 
+@media only screen and (max-device-width :480px) {}
+
+@media only screen and (min-device-width :481px) {} */
+
+/*6*/
 /* @media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){ }  */
 
-/*6+*/ 
+/*6+*/
 /* @media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){ }  */
 
-/*魅族*/ 
+/*魅族*/
 /* @media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 2.5){ }  */
 
-/*mate7*/ 
+/*mate7*/
 /* @media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 3){ }  */
 
-/*4 4s*/ 
+/*4 4s*/
 /* @media only screen and (device-height :480px) and (-webkit-device-pixel-ratio:2){ }  */
 
 
 /* 某个尺寸的特殊样式 竖屏时宽度为768px 符合一般ipad的条件 */
-@media only screen and(orientation:portrait) and(device-width:768px) {
-}
+@media only screen and(orientation:portrait) and(device-width:768px) {}
