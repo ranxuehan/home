@@ -30,9 +30,18 @@ axios.interceptors.response.use(data => {
   }
   return Promise.resolve(err);
 })
-
+// checkNavigator()
+function checkNavigator() {
+  var sUserAgent = navigator.userAgent.toLowerCase();
+  if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+    //跳转移动端页面
+    console.log('appppp')
+  } else {
+    //跳转pc端页面
+    console.log('pccccc')
+  }
+}
 export const postRequest = (url, baseURL, params) => {
-  console.log(params, 'params', qs.stringify(params))
   return axios({
     method: 'post',
     baseURL: `${baseURL}`,

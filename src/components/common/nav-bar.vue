@@ -1,12 +1,11 @@
 <template>
   <div class="">
-    <div id="header" class="header">
+    <div id="header-app" class="header-app">
       <h4>www.12345.com</h4>
       <ul class="com-nav">
         <li v-for="(item,index) in navList" :key="item.name" @click="handleAction(item,index)" :class="{'activation-nav' : index == actionIndex}">{{item.name}}</li>
       </ul>
     </div>
-  </div>
   </div>
 </template>
 <script>
@@ -61,7 +60,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.header {
+.header-app {
   height: 60px;
   line-height: 60px;
   display: flex;
