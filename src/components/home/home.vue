@@ -1,16 +1,16 @@
 <template>
   <div>
-        <!-- 悬浮广告 -->
-        <div class="positon-td td-left-fixed">
-          <banner-ad v-if="adLists.length>0" :image="adLists[0]" :height="350" :width="150">
-            <img class="close" slot="close"  src="../../assets/close.png">
-          </banner-ad>
-        </div>
-         <div class="positon-td td-rigth-fixed">
-          <banner-ad v-if="adLists.length>0" :image="adLists[1]" :height="350" :width="150">
-             <img class="close" slot="close"  src="../../assets/close.png">
-          </banner-ad>
-        </div>
+    <!-- 悬浮广告 -->
+    <div class="positon-td td-left-fixed">
+      <banner-ad v-if="adLists.length>0" :image="adLists[0]" :height="350" :width="150">
+        <img class="close" slot="close" src="../../assets/close.png">
+      </banner-ad>
+    </div>
+    <div class="positon-td td-rigth-fixed">
+      <banner-ad v-if="adLists.length>0" :image="adLists[1]" :height="350" :width="150">
+        <img class="close" slot="close" src="../../assets/close.png">
+      </banner-ad>
+    </div>
     <div id="wrapper">
       <div class="content">
         <nav-bar></nav-bar>
@@ -19,56 +19,56 @@
             <banner-ad v-if="adLists.length>0" :image="adLists[2]" :height="380"></banner-ad>
             <banner-ad :image="adLists[3]" :height="380"></banner-ad>
           </div>
-          <class-public :mclass="1" :sclass="101" :row="6"></class-public>
+          <class-public :mclass="1" :sclass="101" :row="row"></class-public>
           <!-- 广告 -->
           <div class="banner-default">
             <banner-ad :image="adLists[4]" :height="148"></banner-ad>
           </div>
-          <class-public :mclass="2" :sclass="201"  :row="6"></class-public>
+          <class-public :mclass="2" :sclass="201" :row="row"></class-public>
 
           <div class="banner-default">
             <banner-ad :image="adLists[5]" :height="148"></banner-ad>
           </div>
-          <class-public :mclass="3" :sclass="301"  :row="6"></class-public>
+          <class-public :mclass="3" :sclass="301" :row="row"></class-public>
 
           <div class="banner-default">
             <banner-ad :image="adLists[6]" :height="148"></banner-ad>
           </div>
-          <class-public :mclass="4" :sclass="401"  :row="6"></class-public>
+          <class-public :mclass="4" :sclass="401" :row="row"></class-public>
 
           <div class="banner-default">
             <banner-ad :image="adLists[7]" :height="148"></banner-ad>
           </div>
-          <class-public :mclass="5" :sclass="501"  :row="6"></class-public>
+          <class-public :mclass="5" :sclass="501" :row="row"></class-public>
 
           <div class="banner-default">
             <banner-ad :image="adLists[8]" :height="148"></banner-ad>
           </div>
-          <class-public :mclass="6" :sclass="601"  :row="6"></class-public>
+          <class-public :mclass="6" :sclass="601" :row="row"></class-public>
 
           <div class="banner-default">
             <banner-ad :image="adLists[9]" :height="148"></banner-ad>
           </div>
-          <class-public :mclass="7" :sclass="701"  :row="6"></class-public>
+          <class-public :mclass="7" :sclass="701" :row="row"></class-public>
 
           <div class="banner-default">
             <banner-ad :image="adLists[10]" :height="148"></banner-ad>
           </div>
-          <class-public :mclass="8" :sclass="801"  :row="6"></class-public>
+          <class-public :mclass="8" :sclass="801" :row="row"></class-public>
 
           <div class="banner-default">
             <banner-ad :image="adLists[11]" :height="148"></banner-ad>
           </div>
-          <class-public :mclass="9" :sclass="901"  :row="6"></class-public>
+          <class-public :mclass="9" :sclass="901" :row="row"></class-public>
 
           <div class="banner-default">
             <banner-ad :image="adLists[12]" :height="148"></banner-ad>
           </div>
-          <class-public :mclass="10" :sclass="1001"  :row="6"></class-public>
+          <class-public :mclass="10" :sclass="1001" :row="row"></class-public>
 
           <div class="banner-cont">
-            <banner-ad v-if="adLists.length>0" :image="adLists[13]" :height="380"  :width="1200"></banner-ad>
-            <banner-ad :image="adLists[14]" :height="380"  :width="1200"></banner-ad>
+            <banner-ad v-if="adLists.length>0" :image="adLists[13]" :height="380" :width="1200"></banner-ad>
+            <banner-ad :image="adLists[14]" :height="380" :width="1200"></banner-ad>
           </div>
 
         </div>
@@ -83,7 +83,7 @@ import axios from "axios";
 import * as api from "../../api/home.js";
 import apis from "../../api/apis.js";
 import NavBar from "../common/nav-bar.vue";
-import FooterBar from "../common/footer-bar.vue"; 
+import FooterBar from "../common/footer-bar.vue";
 import BannerAd from "../common/banner-ad.vue"; // 广告
 import ClassPublic from "../common/class-public.vue"; // 频道
 
@@ -99,10 +99,13 @@ export default {
   data() {
     return {
       adLists: [],
-      videoDatas: []
+      videoDatas: [],
+      row:3
     };
   },
+
   mounted() {
+    console.log('home页面')
     this.adList();
   },
   methods: {
@@ -124,6 +127,8 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+@import url("../styles/me-home.less");
+
 </style>
 
 

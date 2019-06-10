@@ -52,6 +52,7 @@ export default {
     };
   },
   mounted() {
+    console.log(this.row)
     this.videoList();
   },
   methods: {
@@ -67,7 +68,6 @@ export default {
           if (res.code == 0) {
             this.videoData = res.data;
             this.newVideoData = this.videoData.splice(0,this.row)
-            console.log(this.newVideoData,'this.videoData')  
           }
         })
         .catch(error => {});
